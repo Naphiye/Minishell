@@ -4,7 +4,7 @@
 **Minishell** est un projet de l’école 42 qui consiste à recréer un **mini interpréteur de commandes Unix**.  
 L’objectif est de comprendre en profondeur le fonctionnement d’un shell en implémentant les principales fonctionnalités nécessaires pour exécuter des commandes et gérer les processus.  
 
-Ce projet a été réalisé en **binôme avec [@Antoine Jourdan Astruc ](https://github.com/Ajap75)**.
+Ce projet a été réalisé en **binôme avec [Antoine Jourdan Astruc ](https://github.com/Ajap75)**.
 
 
 Ce projet permet de se familiariser avec :  
