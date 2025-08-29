@@ -15,7 +15,7 @@ Ce projet permet de se familiariser avec :
 ## 🎯 Objectifs et Contraintes
 - Implémenter une boucle de lecture de commandes (prompt).  
 - Exécuter les commandes saisies par l’utilisateur avec leurs arguments.  
-- Gérer les **redirections** (`>`, `>>`, `<`) et les **pipes** (`|`).  
+- Gérer les **redirections** (`>`, `>>`, `<`, `<<`) et les **pipes** (`|`).  
 - Implémenter les variables d’environnement (`$VAR`).  
 - Gérer les guillemets simples et doubles.  
 - Implémenter les **builtins** suivants :  
@@ -54,6 +54,7 @@ minishell
 
 Vous arrivez sur un prompt interactif :  
 minishell$  
+
 ### 3️⃣ Exemple d’utilisation
 
 #### Commandes simples
@@ -95,6 +96,36 @@ daemon
 bin  
 sys  
 
+#### Heredoc (<<)
+minishell$ cat << END  
+Hello  
+42  
+School  
+END  
+
+Hello  
+42  
+School  
+
+minishell$ grep 42 << LIMITER  
+Salut  
+Coucou 42  
+Encore une ligne  
+LIMITER  
+
+Coucou 42  
+
+👉 Le heredoc permet de fournir du texte multi-lignes en entrée standard jusqu’au mot-clé de fin.  
+Il fonctionne aussi avec des pipes et des redirections, exemple :  
+
+minishell$ cat << EOF | grep Hello > result.txt  
+Hello World  
+Salut 42  
+EOF  
+
+minishell$ cat result.txt  
+Hello World  
+
 #### Gestion des erreurs
 minishell$ cd dossier_inexistant  
 minishell: cd: dossier_inexistant: No such file or directory  
@@ -108,4 +139,5 @@ minishell$ sleep 100
 
 minishell$ cat  
 ^D   (ctrl-D) → quitte proprement le shell.  
+
 
