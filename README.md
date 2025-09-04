@@ -47,98 +47,26 @@ Ce projet permet de se familiariser avec :
 
 ### 1️⃣ Compilation
 Dans le répertoire du projet, lancer :  
+```bash
 make  
+```
 
-Cela génère l’exécutable :  
+Cela génère l’exécutable :
+```bash
+
 minishell  
+```
 
 ### 2️⃣ Lancement du shell
+```bash
 ./minishell  
+```
 
-Vous arrivez sur un prompt interactif :  
-minishell$  
+Vous arrivez sur un prompt interactif :
+```bash
+Fanny & Antoine SHELL :$  
+```
 
-### 3️⃣ Exemple d’utilisation
-
-#### Commandes simples
-minishell$ echo Hello World  
-Hello World  
-
-minishell$ pwd  
-/home/user/minishell  
-
-#### Variables d’environnement
-minishell$ export NAME=42  
-minishell$ echo $NAME  
-42  
-
-minishell$ echo "Hello $NAME Students"  
-Hello 42 Students  
-
-#### Redirections
-minishell$ echo "Ceci est un test" > file.txt  
-minishell$ cat < file.txt  
-Ceci est un test  
-
-minishell$ echo "ajout" >> file.txt  
-minishell$ cat file.txt  
-Ceci est un test  
-ajout  
-
-#### Pipes
-minishell$ ls -l | grep minishell | wc -l  
-1  
-
-minishell$ cat /etc/passwd | grep root | cut -d: -f1  
-root  
-
-#### Combinaisons redirections + pipes
-minishell$ cat /etc/passwd | grep "bin" | cut -d: -f1 > users.txt  
-minishell$ cat users.txt  
-daemon  
-bin  
-sys  
-
-#### Heredoc (<<)
-minishell$ cat << END  
-Hello  
-42  
-School  
-END  
-
-Hello  
-42  
-School  
-
-minishell$ grep 42 << LIMITER  
-Salut  
-Coucou 42  
-Encore une ligne  
-LIMITER  
-
-Coucou 42  
-
-👉 Le heredoc permet de fournir du texte multi-lignes en entrée standard jusqu’au mot-clé de fin.  
-Il fonctionne aussi avec des pipes et des redirections, exemple :  
-
-minishell$ cat << EOF | grep Hello > result.txt  
-Hello World  
-Salut 42  
-EOF  
-
-minishell$ cat result.txt  
-Hello World  
-
-#### Gestion des erreurs
-minishell$ cd dossier_inexistant  
-minishell: cd: dossier_inexistant: No such file or directory  
-
-minishell$ ls | grep "fichier" > /root/test.txt  
-minishell: permission denied: /root/test.txt  
-
-#### Signaux
-minishell$ sleep 100  
-^C   (ctrl-C) → interrompt correctement la commande et retourne au prompt.  
 
 minishell$ cat  
 ^D   (ctrl-D) → quitte proprement le shell.  
