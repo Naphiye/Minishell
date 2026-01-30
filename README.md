@@ -35,13 +35,13 @@ Ce projet permet de se familiariser avec :
   - Gérer les erreurs comme un vrai shell (codes de retour).  
   - Respecter les normes de l’école 42.  
 
-### ⚡ Gestion des signaux
+### Gestion des signaux
 - `ctrl-C` : affiche un retour à la ligne et réaffiche le prompt sans quitter le shell.  
 - `ctrl-D` : ferme le shell proprement (équivalent de la commande `exit`).  
 - `ctrl-\` : ne fait rien (n’interrompt pas le shell). 
----
+  
 
-## 🚀 Utilisation
+## Utilisation
 
 ### Compilation
 ```bash
