@@ -1,6 +1,6 @@
 # 🐚 Minishell
 
-## 📖 Présentation
+## Présentation
 **Minishell** est un projet de l’école 42 qui consiste à recréer un **mini interpréteur de commandes Unix**.  
 L’objectif est de comprendre en profondeur le fonctionnement d’un shell en implémentant les principales fonctionnalités nécessaires pour exécuter des commandes et gérer les processus.  
 
@@ -13,9 +13,8 @@ Ce projet permet de se familiariser avec :
 - La manipulation des descripteurs de fichiers (redirections, pipes).  
 - Le parsing et l’interprétation des commandes.  
 
----
 
-## 🎯 Objectifs et Contraintes
+## Objectifs et Contraintes
 - Implémenter une boucle de lecture de commandes (prompt).  
 - Exécuter les commandes saisies par l’utilisateur avec leurs arguments.  
 - Gérer les **redirections** (`>`, `>>`, `<`, `<<`) et les **pipes** (`|`).  
@@ -39,25 +38,17 @@ Ce projet permet de se familiariser avec :
 ### ⚡ Gestion des signaux
 - `ctrl-C` : affiche un retour à la ligne et réaffiche le prompt sans quitter le shell.  
 - `ctrl-D` : ferme le shell proprement (équivalent de la commande `exit`).  
-- `ctrl-\` : ne fait rien (n’interrompt pas le shell).  
-
+- `ctrl-\` : ne fait rien (n’interrompt pas le shell). 
 ---
 
 ## 🚀 Utilisation
 
-### 1️⃣ Compilation
-Dans le répertoire du projet, lancer :  
+### Compilation
 ```bash
 make  
 ```
 
-Cela génère l’exécutable :
-```bash
-
-minishell  
-```
-
-### 2️⃣ Lancement du shell
+### Lancement du shell
 ```bash
 ./minishell  
 ```
@@ -67,8 +58,5 @@ Vous arrivez sur un prompt interactif :
 Fanny & Antoine SHELL :$  
 ```
 
-
-minishell$ cat  
-^D   (ctrl-D) → quitte proprement le shell.  
 
 
